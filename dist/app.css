@@ -1,5 +1,6 @@
 * {
   outline: none;
+  touch-action: manipulation;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
@@ -64,6 +65,7 @@ footer a:hover {
   border-radius: 6px;
   padding: 0.7em 1.5em;
   transition: all 0.12s ease-out;
+  font-size: 14px;
 }
 
 #controls button:not([disabled]):hover {
@@ -73,7 +75,9 @@ footer a:hover {
 }
 
 #stage {
+  position: relative;
   margin: 4em auto 6em auto;
+  overflow: hidden;
 }
 
 #stage section {
@@ -85,7 +89,6 @@ footer a:hover {
   grid-template-columns: [c1] 33.33% [c2] 33.33% [c3] 33.33% [c-end];
   grid-template-rows: [r1] 33.33% [r2] 33.33% [r3] 33.33% [r-end];
   filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.15));
-  overflow: hidden;
 }
 
 #stage button {
