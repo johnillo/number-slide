@@ -1,5 +1,6 @@
 * {
   outline: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {
@@ -84,6 +85,7 @@ footer a:hover {
   grid-template-columns: [c1] 33.33% [c2] 33.33% [c3] 33.33% [c-end];
   grid-template-rows: [r1] 33.33% [r2] 33.33% [r3] 33.33% [r-end];
   filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.15));
+  overflow: hidden;
 }
 
 #stage button {
