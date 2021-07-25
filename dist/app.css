@@ -1,0 +1,115 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(240, 240, 244);
+  font-family: sans-serif;
+}
+
+main {
+  background-color: rgb(230, 230, 234);
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: rgb(57, 57, 61);
+  margin: 0;
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: rgb(110, 110, 114);
+  text-transform: uppercase;
+}
+
+footer a {
+  color: rgb(110, 110, 114);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+#wrapper {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2em;
+  box-sizing: border-box;
+}
+
+#controls {
+  display: flex;
+  margin: 2em 0 1em 0;
+  justify-content: center;
+  align-items: center;
+}
+
+#controls button {
+  background-color: rgb(220, 220, 224);
+  border: 0;
+  border-radius: 6px;
+  padding: 0.7em 1.5em;
+  transition: all 0.12s ease-out;
+}
+
+#controls button:not([disabled]):hover {
+  cursor: pointer;
+  background-color: #04bbd9;
+  color: white;
+}
+
+#stage {
+  margin: 4em auto 6em auto;
+}
+
+#stage section {
+  width: 100%;
+  min-height: 130px;
+  border-radius: 8px;
+  position: relative;
+  display: grid;
+  grid-template-columns: [c1] 33.33% [c2] 33.33% [c3] 33.33% [c-end];
+  grid-template-rows: [r1] 33.33% [r2] 33.33% [r3] 33.33% [r-end];
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.15));
+}
+
+#stage button {
+  margin: 0;
+  padding: 0;
+  font-size: 3em;
+  background: rgb(250, 250, 252);
+  color: rgb(50, 50, 55);
+  overflow: hidden;
+  transition: transform 0.12s ease-out, background-color 0.12s ease-out;
+  border-radius: 8px;
+  border: 1px solid rgb(198, 198, 201);
+  grid-column-start: c1;
+  grid-row-start: r1;
+  z-index: 1;
+}
+
+#stage button.fast {
+  transition: transform 0.08s ease-out;
+}
+
+#stage.done button[disabled] {
+  background-color: #20a076;
+  color: white;
+}
+
+.c1.r1 { transform: translate(0, 0); }
+.c1.r2 { transform: translate(0, 100%); }
+.c1.r3 { transform: translate(0, 200%); }
+
+.c2.r1 { transform: translate(100%, 0); }
+.c2.r2 { transform: translate(100%, 100%); }
+.c2.r3 { transform: translate(100%, 200%); }
+
+.c3.r1 { transform: translate(200%, 0); }
+.c3.r2 { transform: translate(200%, 100%); }
+.c3.r3 { transform: translate(200%, 200%); }
