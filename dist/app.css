@@ -3,6 +3,10 @@ body {
   margin: 0;
   background-color: rgb(240, 240, 244);
   font-family: sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 main {
