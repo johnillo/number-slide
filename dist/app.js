@@ -224,7 +224,7 @@ function resizeStage() {
 }
 
 tiles.forEach(function (button) {
-  button.onclick = function (e) {
+  button.onmousedown = function (e) {
     var tileId = e.target.id;
     var index = grid.indexOf(parseInt(tileId));
     moveHorizontal(index);
